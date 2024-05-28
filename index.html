@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анімація за допомогою marquee та CSS animation</title>
+    <style>
+        /* CSS animation */
+        @keyframes slide {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animated-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: slide 10s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Анімація за допомогою marquee -->
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+        Це текст, що рухається за допомогою тегу marquee <marquee>.
+    </marquee>
+
+    <br><br>
+
+    <!-- Анімація за допомогою CSS animation -->
+    <div style="overflow: hidden; white-space: nowrap;">
+        <span class="animated-text">
+            Це текст, що рухається за допомогою CSS анімації.
+        </span>
+    </div>
+</body>
+</html>
